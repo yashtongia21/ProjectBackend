@@ -85,45 +85,7 @@ public class PlanController {
 		return resp;
 	}
 	
-	
-	
-	@GetMapping("/{city}")
-	public ResponseEntity<List<Plan>> getAllPlansCity(@PathVariable("city") String city
-			) {
-
-		ResponseEntity<List<Plan>> resp;
-		List<Plan> results = service.findPlanByCity(city);
-		if (results != null && results.size() != 0) {
-			resp = new ResponseEntity<>(results, HttpStatus.OK);
-		} else {
-			resp = new ResponseEntity<>(HttpStatus.NOT_FOUND);
-		}
-
 		
-		
-			
-		
-
-		return resp;
-	}
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 }
